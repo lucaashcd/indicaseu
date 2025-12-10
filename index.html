@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE/MAX Seu Imóvel - Indique e Ganhe</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 12px 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-left img,
+.logo-right img {
+    height: auto;
+}
+
+.\31 img {
+    height: 70px;
+}
+
+.\32 img {
+    height: 45px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    background-color: #B01F29;
+    padding: 12px 35px;
+    border-radius: 50px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    background: #E4E8E6 url('images/3.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.icon-dollar {
+    width: 90px;
+    height: 90px;
+    background-color: #03458C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.hero-content-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.hero-text h2 {
+    font-size: 38px;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 .highlight {
+    font-weight: 800;
+    color: #333;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.hero-description strong {
+    font-weight: 700;
+    color: #333;
+}
+
+.hero-description:last-of-type {
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 0 0 450px;
+    background-color: #B01F29;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(185, 41, 56, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: #B01F29;
+    color: white;
+    box-shadow: 0 4px 15px rgba(176, 31, 41, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #9a1a24;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(176, 31, 41, 0.4);
+}
+
+.btn-hero {
+    border-radius: 5px;
+}
+
+/* Como Funciona Section */
+.como-funciona {
+    background-color: #B01F29;
+    padding: 0 0 150px 0;
+    position: relative;
+}
+
+.section-header {
+    background-color: #03458C;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.section-header h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.como-funciona-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.money-top-right {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 200px;
+    height: auto;
+    z-index: 1;
+}
+
+.money-bottom-left {
+    position: absolute;
+    bottom: -130px;
+    left: -50px;
+    width: 300px;
+    height: auto;
+    z-index: 1;
+}
+
+.section-title {
+    color: white;
+    font-size: 42px;
+    text-align: left;
+    margin: 40px 0 35px 0;
+    font-weight: 300;
+    width: 100%;
+    max-width: 900px;
+}
+
+.section-title strong {
+    font-weight: 700;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.step-icon svg {
+    width: 50px;
+    height: 50px;
+}
+
+.step-content h4 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.step-content p {
+    color: #333;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.step-content p strong {
+    font-weight: 700;
+}
+
+.money-images {
+    display: none;
+}
+
+/* Benefícios Section */
+.beneficios {
+    background: #E4E8E6 url('images/3.png') no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+
+.section-header-blue {
+    background-color: #03458C;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.section-header-blue h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.beneficios-content {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 0;
+}
+
+.beneficios-text {
+    flex: 1;
+    padding: 60px 60px 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beneficios-text h3 {
+    font-size: 38px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.intro-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.bold-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin: 15px 0 25px 0;
+}
+
+.beneficio-item {
+    margin-bottom: 20px;
+}
+
+.beneficio-item h4 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.beneficio-item .value {
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+
+.no-bureaucracy {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin: 25px 0 30px 0;
+}
+
+.no-bureaucracy p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.no-bureaucracy p strong {
+    font-weight: 700;
+}
+
+.beneficios-image {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: stretch;
+}
+
+.beneficios-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* CTA Section */
+.section-header-cta {
+    background-color: #03458C;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.section-header-cta h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cta {
+    background: #E4E8E6 url('images/3.png') no-repeat center center;
+    background-size: cover;
+    padding: 0 0 60px 0;
+}
+
+.cta .container {
+    padding-top: 60px;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.cta-logo {
+    flex: 0 0 320px;
+}
+
+.cta-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-text {
+    flex: 1;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.cta-text h2 {
+    color: #333;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    padding: 40px 0 25px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-logo {
+    margin-bottom: 8px;
+}
+
+.footer-logo img {
+    height: 75px;
+    width: auto;
+}
+
+.footer-info h3 {
+    color: #333;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 2px 0;
+    line-height: 1.6;
+}
+
+.footer-divider {
+    width: 100%;
+    max-width: 850px;
+    height: 2px;
+    background-color: #259990;
+    margin: 18px 0;
+}
+
+.footer-copyright {
+    margin: 12px 0;
+}
+
+.footer-copyright p {
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.footer-button {
+    margin-top: 12px;
+}
+
+.btn-terms {
+    display: inline-block;
+    padding: 13px 35px;
+    background-color: #259990;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-terms:hover {
+    background-color: #1f7d77;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 153, 144, 0.3);
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-button svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content,
+    .beneficios-content,
+    .cta-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .hero-image,
+    .beneficios-image {
+        flex: 0 0 auto;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header Mobile */
+    .header .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .logo-left,
+    .logo-right {
+        order: 1;
+    }
+    
+    .\31 img {
+        height: 55px;
+    }
+    
+    .\32 img {
+        height: 35px;
+    }
+    
+    .nav {
+        order: 2;
+        width: 100%;
+    }
+    
+    .nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+    
+    .nav a {
+        padding: 8px 15px;
+    }
+    
+    /* Hero Section Mobile - Organização: Títulos > Botão > Imagem com $ > Textos */
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-text {
+        order: 1;
+        width: 100%;
+    }
+    
+    .hero-text-inner {
+        display: contents;
+    }
+    
+    .hero-content-text {
+        display: contents;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+        line-height: 1.1;
+        text-align: center;
+        order: 1;
+        margin-bottom: 5px;
+    }
+    
+    .hero-text h2 {
+        font-size: 24px;
+        text-align: center;
+        order: 2;
+        margin-bottom: 20px;
+    }
+    
+    .btn-hero {
+        width: auto;
+        max-width: 280px;
+        margin: 0 auto 30px;
+        display: block;
+        text-align: center;
+        order: 3;
+    }
+    
+    .dollar-circle,
+    .icon-dollar {
+        display: none !important;
+    }
+    
+    .hero-image {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto 30px;
+        order: 4;
+        position: relative;
+    }
+    
+    .hero-image::after {
+        content: '$';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 70px;
+        height: 70px;
+        background-color: #03458C;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 38px;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .hero-card {
+        border-radius: 30px;
+    }
+    
+    .hero-description {
+        display: block !important;
+        font-size: 15px;
+        text-align: center;
+        margin: 10px 0;
+        order: 5;
+        padding: 0 20px;
+    }
+    
+    /* Como Funciona Section Mobile - Image 1 */
+    .como-funciona {
+        padding: 0 0 40px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+        padding: 12px 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        text-align: center;
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .step {
+        padding: 25px 20px;
+    }
+    
+    .step-icon {
+        margin-bottom: 15px;
+    }
+    
+    .step-content h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .step-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .money-top-right,
+    .money-bottom-left {
+        display: none;
+    }
+    
+    /* Benefícios Section Mobile - Image 2 */
+    .beneficios {
+        padding: 0;
+    }
+    
+    .section-header-blue h2 {
+        font-size: 24px;
+        padding: 12px 15px;
+    }
+    
+    .beneficios-content {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .beneficios-text {
+        padding: 0;
+    }
+    
+    .beneficios-text h3 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .intro-text {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .bold-text {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .beneficio-item {
+        text-align: center;
+    }
+    
+    .beneficio-item h4 {
+        font-size: 18px;
+    }
+    
+    .beneficio-item .value {
+        font-size: 15px;
+    }
+    
+    .no-bureaucracy {
+        text-align: center;
+    }
+    
+    .beneficios-image {
+        display: none;
+    }
+    
+    .beneficios-text .btn-primary {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto 0;
+        display: block;
+    }
+    
+    /* CTA Section Mobile - Image 4 */
+    .cta {
+        padding: 0 0 40px 0;
+    }
+    
+    .section-header-cta h2 {
+        font-size: 24px;
+        padding: 12px 15px;
+    }
+    
+    .cta .container {
+        padding: 30px 20px;
+    }
+    
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .cta-logo {
+        flex: 0 0 auto;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .cta-text {
+        text-align: center;
+    }
+    
+    .cta-text h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .cta-text .btn-primary {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        padding: 30px 0 20px 0;
+    }
+    
+    .footer-logo img {
+        height: 65px;
+    }
+    
+    .footer-info h3 {
+        font-size: 16px;
+    }
+    
+    .footer-info p {
+        font-size: 13px;
+    }
+    
+    /* WhatsApp Button Mobile */
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-button svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-left 1">
+                <img src="images/1.png" alt="Indique a Seu">
+            </div>
+            <nav class="nav">
+                <a href="#inicio">INÍCIO</a>
+                <a href="#como-funciona">COMO FUNCIONA</a>
+                <a href="#beneficios">BENEFÍCIOS</a>
+                <a href="https://api.whatsapp.com/send/?phone=5585992998855&text=Gostaria+fazer+uma+indica%C3%A7%C3%A3o+de+um+im%C3%B3vel+ao+Programa+Indica+a+seu%21&type=phone_number&app_absent=0" target="_blank">CONTATO</a>
+            </nav>
+            <div class="logo-right 2">
+                <img src="images/2.png" alt="RE/MAX Seu Imóvel">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-text-inner">
+                        <div class="icon-dollar">$</div>
+                        <div class="hero-content-text">
+                            <h1>Indique & Ganhe:</h1>
+                            <h2>Transforme sua<br>Indicação em<br><span class="highlight">Dinheiro!</span></h2>
+                            <p class="hero-description">
+                                Você sabia que na RE/MAX Seu Imóvel, <strong>sua indicação vale dinheiro?</strong>
+                            </p>
+                            <p class="hero-description">
+                                Para participar é simples: indique um imóvel, e quando ele for 
+                                alugado ou vendido, você <strong>ganha uma recompensa</strong>.
+                            </p>
+                            <a href="https://api.whatsapp.com/send/?phone=5585992998855&text=Gostaria+fazer+uma+indica%C3%A7%C3%A3o+de+um+im%C3%B3vel+ao+Programa+Indica+a+seu%21&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary btn-hero">QUERO INDICAR!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/4.png" alt="Pessoa com dinheiro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="como-funciona" class="como-funciona">
+        <div class="section-header">
+            <h2>Ganhe até R$ 500,00 em dinheiro!</h2>
+        </div>
+        <div class="container">
+            <div class="como-funciona-wrapper">
+                <img src="images/5.png" alt="Dinheiro" class="money-top-right">
+                <img src="images/6.png" alt="Dinheiro" class="money-bottom-left">
+                
+                <h3 class="section-title">Como <strong>Ganhar Dinheiro</strong> com<br>Suas Indicações?</h3>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+                                <rect x="5" y="5" width="50" height="50" rx="8" fill="#B01F29"/>
+                                <path d="M20 30L27 37L40 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>PASSO 1</h4>
+                            <p>Preencha os dados do imóvel e do proprietário em poucos minutos. Não precisa se preocupar com burocracias, nós cuidamos do resto!</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+                                <rect x="5" y="5" width="50" height="50" rx="8" fill="#B01F29"/>
+                                <path d="M38 41c-1.5 0-7.5-1.5-13.5-7.5S17 21.5 17 20c0-1 .5-1.5 1.5-2.5l2-2c.5-.5 1.5-.5 2 0l3.5 3.5c.5.5.5 1.5 0 2l-1.5 1.5c0 0 1 3 4 6s6 4 6 4l1.5-1.5c.5-.5 1.5-.5 2 0l3.5 3.5c.5.5.5 1.5 0 2l-2 2c-1 1-1.5 1.5-2.5 1.5z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>PASSO 2</h4>
+                            <p>Após recebermos a indicação, nossa equipe entra em contato com o proprietário do imóvel e apresenta nossos serviços de comercialização.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+                                <rect x="5" y="5" width="50" height="50" rx="8" fill="#B01F29"/>
+                                <rect x="20" y="20" width="20" height="18" rx="2" stroke="white" stroke-width="2.5" fill="none"/>
+                                <line x1="20" y1="26" x2="40" y2="26" stroke="white" stroke-width="2.5"/>
+                                <line x1="25" y1="17" x2="25" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="35" y1="17" x2="35" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>PASSO 3</h4>
+                            <p>O proprietário decide contratar nossos serviços para a venda ou locação do imóvel.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+                                <rect x="5" y="5" width="50" height="50" rx="8" fill="#B01F29"/>
+                                <text x="30" y="40" font-size="28" font-weight="bold" fill="white" text-anchor="middle">$</text>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>PASSO 4</h4>
+                            <p>Fechamos o negócio? <strong>O PIX cai direto na sua conta!</strong> Quanto mais indicações você fizer, mais dinheiro pode ganhar. Sem limites!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="beneficios">
+        <div class="section-header-blue">
+            <h2>Quanto vou ganhar se indicar um imóvel?</h2>
+        </div>
+        <div class="container">
+            
+            <div class="beneficios-content">
+                <div class="beneficios-text">
+                    <h3>Benefícios e<br>Recompensas</h3>
+                    
+                    <p class="intro-text">Tem um amigo que quer vender ou alugar um imóvel?</p>
+                    <p class="intro-text">Conhece alguém buscando um novo lar para comprar ou alugar?</p>
+                    <p class="bold-text">Indique o proprietário ou o cliente final e ganhe nas duas situações!</p>
+                    
+                    <div class="beneficio-item">
+                        <h4>Venda:</h4>
+                        <p class="value">Ganhe R$ 500,00 quando o imóvel for vendido.</p>
+                    </div>
+                    
+                    <div class="beneficio-item">
+                        <h4>Locação:</h4>
+                        <p class="value">Ganhe R$ 100,00 na publicação + 10% do primeiro aluguel.</p>
+                    </div>
+                    
+                    <div class="no-bureaucracy">
+                        <p><strong>Sem burocracia, sem custo!</strong></p>
+                        <p>Apenas indique e ganhe.</p>
+                    </div>
+                    
+                    <a href="https://api.whatsapp.com/send/?phone=5585992998855&text=Gostaria+fazer+uma+indica%C3%A7%C3%A3o+de+um+im%C3%B3vel+ao+Programa+Indica+a+seu%21&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary">Apenas indique agora!</a>
+                </div>
+                
+                <div class="beneficios-image">
+                    <img src="images/7.png" alt="Mão segurando chaves de casa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="section-header-cta">
+            <h2>Comece a indicar agora</h2>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-logo">
+                    <img src="images/8.png" alt="Balão RE/MAX">
+                </div>
+                <div class="cta-text">
+                    <h2>Comece a indicar agora e<br>garanta já a sua renda extra!</h2>
+                    <a href="https://api.whatsapp.com/send/?phone=5585992998855&text=Gostaria+fazer+uma+indica%C3%A7%C3%A3o+de+um+im%C3%B3vel+ao+Programa+Indica+a+seu%21&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary">Quero indicar agora!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-logo">
+                    <img src="images/9.png" alt="RE/MAX Seu Imóvel">
+                </div>
+                <div class="footer-info">
+                    <h3>RE/MAX Seu Imóvel</h3>
+                    <p>Avenida Washington Soares, 8660 B</p>
+                    <p>Messejana, Fortaleza - CE, 60841-032</p>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-copyright">
+                    <p>Copyright © Remax Seu Imóvel – Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-button">
+                    <a href="https://web.seuimovel.com.br/termos-e-politicas" target="_blank" class="btn-terms">Acessar termos e políticas</a>
+                </div>
+            </div>
+        </div>
+        <a href="https://api.whatsapp.com/send/?phone=5585992998855&text=Gostaria+fazer+uma+indica%C3%A7%C3%A3o+de+um+im%C3%B3vel+ao+Programa+Indica+a+seu%21&type=phone_number&app_absent=0" target="_blank" class="whatsapp-button" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32" width="32" height="32">
+                <path fill="white" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.293 1.424 1.424-5.293-0.292-0.507c-1.225-2.163-1.87-4.588-1.87-7.070 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.54 18.48c-0.213-0.107-1.264-0.627-1.46-0.697s-0.338-0.107-0.481 0.107c-0.143 0.213-0.554 0.697-0.679 0.84s-0.25 0.16-0.464 0.053c-1.285-0.643-2.127-1.146-2.975-2.597-0.224-0.384 0.224-0.357 0.642-1.189 0.071-0.143 0.036-0.268-0.018-0.375s-0.481-1.157-0.659-1.585c-0.174-0.418-0.353-0.362-0.481-0.369-0.125-0.006-0.268-0.007-0.411-0.007s-0.375 0.053-0.571 0.268c-0.196 0.214-0.75 0.733-0.75 1.789s0.768 2.076 0.875 2.219c0.107 0.143 1.502 2.293 3.64 3.216 1.339 0.579 1.864 0.637 2.533 0.536 0.406-0.061 1.264-0.518 1.442-1.018s0.179-0.929 0.125-1.018c-0.053-0.089-0.196-0.143-0.411-0.25z"/>
+            </svg>
+        </a>
+    </footer>
+</body>
+</html>
